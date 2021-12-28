@@ -1,0 +1,11 @@
+---
+- hosts: all
+  gather_facts: no
+  tasks:
+
+    - go_example:
+        input_param: 2 # try to change to 8
+        another_input_param: "bla-bla-bla"
+      register: out
+
+    - debug: var=out
